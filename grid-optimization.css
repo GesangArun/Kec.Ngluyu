@@ -1,0 +1,89 @@
+/* Grid Optimization untuk 6 Kotak */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Sizing */
+.link-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-illustration {
+    flex: 1;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+    .main-content {
+        max-width: 700px;
+        gap: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        gap: 18px;
+    }
+    
+    .link-card {
+        min-height: 280px;
+    }
+    
+    .card-illustration {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .link-card {
+        min-height: 250px;
+    }
+    
+    .card-illustration {
+        min-height: 160px;
+    }
+}
+
+/* Hover Effects */
+.link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Spacing */
+.link-card:nth-child(odd) {
+    margin-top: 10px;
+}
+
+.link-card:nth-child(even) {
+    margin-bottom: 10px;
+}
+
+/* Animation Delay untuk Staggered Effect */
+.link-card:nth-child(1) { animation-delay: 0.1s; }
+.link-card:nth-child(2) { animation-delay: 0.2s; }
+.link-card:nth-child(3) { animation-delay: 0.3s; }
+.link-card:nth-child(4) { animation-delay: 0.4s; }
+.link-card:nth-child(5) { animation-delay: 0.5s; }
+.link-card:nth-child(6) { animation-delay: 0.6s; }
+
